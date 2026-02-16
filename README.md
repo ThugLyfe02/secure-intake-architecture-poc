@@ -139,3 +139,18 @@ To demonstrate how backend systems in regulated healthcare environments should b
 - Infrastructure foresight
 - Evolvability
 - Operational discipline
+
+---
+
+## Implementation Artifact
+
+The file `secure_intake_demo.py` provides a minimal FastAPI implementation illustrating:
+
+- Stateless API design
+- JWT-based authentication structure
+- Role-Based Access Control (RBAC)
+- Field-level encryption abstraction for PII
+- Audit logging middleware
+- Twelve-factor configuration principles
+
+This implementation is intentionally minimal to emphasize architectural clarity and security posture rather than feature breadth.
