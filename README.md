@@ -154,3 +154,17 @@ The file `secure_intake_demo.py` provides a minimal FastAPI implementation illus
 - Twelve-factor configuration principles
 
 This implementation is intentionally minimal to emphasize architectural clarity and security posture rather than feature breadth.
+
+---
+
+## Infrastructure Overview
+
+The `infrastructure/` directory contains a minimal Terraform configuration demonstrating:
+
+- Provider version pinning
+- AWS region abstraction
+- ECS cluster provisioning
+- Fargate task definition
+- IAM execution role configuration
+
+This configuration is intentionally minimal to emphasize architectural clarity and deployment awareness rather than production-scale complexity.
