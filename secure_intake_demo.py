@@ -110,7 +110,8 @@ async def audit_middleware(request: Request, call_next):
     }
 
     # In production this would go to structured logging system
-    print(log_entry)
+    safe_log = redact_pii(log_entry)
+print(safe_log)
 
     return response
 
@@ -139,3 +140,14 @@ async def create_client(
         "message": "Client created",
         "client_id": client_record["id"]
     }
+
+
+# -------------------------
+# PII Redaction Utility
+# -------------------------
+
+def redact_pii(data: dict) -> dict:
+    redacted = data.copy()
+    if "ssn" in redacted:
+        redacted["ssn"] = "***REDACTED***"
+    return redacted
